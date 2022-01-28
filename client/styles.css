@@ -1,0 +1,16 @@
+html {
+    padding: auto;
+    margin: auto;
+    background-image: url("https://images7.alphacoders.com/662/662102.png");
+    background-repeat: no-repeat;
+}
+
+body {
+    
+    text-align: center;
+}
+
+button {
+    background-color: blue;
+    color: white;
+}

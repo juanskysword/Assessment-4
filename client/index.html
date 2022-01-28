@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Back End Assessment</title>
+  </head>
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+    <br>
+    <br>
+    <button id="fortuneButton">Fortune Cookie</button>
+    <br>
+    <img id="pikachu" src="https://pokecharms.com/data/attachment-files/2017/01/449374_pikachupix.png" alt="" loading="still" style="width: 150px;">
+    <!-- <img src="https://cdn121.picsart.com/212160502002202.gif" alt="" loading="still"> -->
+    <br>
+    <button id="pikaEntry" >Identify This Pokemon</button>
+    <br>
+    <p1></p1>
+    <br>
+      <button id="dog">Dog</button>
+      <br>
+      <img id="loadingDogImage" src="https://www.pdsa.org.uk/media/8508/puppies-running-outdoors-min.jpg" style="visibility:hidden"/>
+      <br>  
+      <button id="cat">Cat</button>
+      <br>
+      <img id="loadingCatImage" src="https://c.tenor.com/Py3PtpNEJJ0AAAAd/cat-lurking.gif" style="visibility:hidden"/>
+      <br>
+      <form>
+        <input 
+            type='text'
+            id="pet"
+            placeholder="What Type of Pet do you have?"/>
+        <input 
+            type='text'
+            id="breed"
+            placeholder='What type of Breed is it?'/>
+        <input 
+            type='text'
+            id="petImg"
+            placeholder='Paste an image URL'/>
+        <button>Add My Pet</button>
+        
+    </form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="Features.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+      };
+    </script>
+  </body>
+</html>
